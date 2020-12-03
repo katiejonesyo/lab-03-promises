@@ -1,3 +1,4 @@
+//I needed more practice with awaits but the step after this is .then
 const fs = require('fs').promises
 
 async function reader() {

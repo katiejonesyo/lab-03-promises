@@ -1,6 +1,3 @@
-//I want to try the .then stuff so if this works for me then I will continue to do .then
-//
-
 const fsPromises = require('fs').promises;
 const { copyAFile } = require('./Copy.js');
 
@@ -17,4 +14,5 @@ describe('copyAFile', () => {
 
         })
     })
-})
+});
+
