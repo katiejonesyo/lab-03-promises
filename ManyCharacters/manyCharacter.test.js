@@ -8,14 +8,9 @@ describe('manyCharacters function', () => {
 
     it('returns a list of characters', async () => {
         const characters = await manyCharacters([1, 3, 5]);
-        const expected =  await [{ name: 'Rick Sanchez', species: 'Human', status: 'Alive' },
-        { name: 'Summer Smith', species: 'Human', status: 'Alive' },
-        { name: 'Jerry Smith', species: 'Human', status: 'Alive' },]
-        expect(expected).toEqual([
-            { name: 'Rick Sanchez', species: 'Human', status: 'Alive' },
-            { name: 'Summer Smith', species: 'Human', status: 'Alive' },
-            { name: 'Jerry Smith', species: 'Human', status: 'Alive' },
-
-        ]);
+        const expected = [ `Name: Rick Sanchez, Status: Alive, Species: Human`,
+        `Name: Summer Smith, Status: Alive, Species: Human`,
+        `Name: Jerry Smith, Status: Alive, Species: Human` ]
+        expect(characters).toEqual(expected);
     })
 })

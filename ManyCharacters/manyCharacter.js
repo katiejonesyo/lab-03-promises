@@ -1,11 +1,11 @@
 const fetch = require('node-fetch');
+const { fetchRickAndMorty } = require('../API/rickAndMortyApi');
 
-function manyCharacters() {
-    Promise.all([fetch('https://rickandmortyapi.com/api/character/')
-])
-.then(([resRickandMorty]) => {
-    //console.log(resRickandMorty)
-})
+function manyCharacters(idArray) {
+    return Promise.all(idArray.map(id => {
+        return fetchRickAndMorty(id);
+    }))
+
 };
 
 
